@@ -1,0 +1,12 @@
+<p>card works!</p>
+
+<button id="flip" (click)="flip()">Increment</button>
+
+<div>Is: {{ card$ | async | json}}</div>
+
+<div class="flip-card" [ngClass]="{'flip-card--flipped': card$ | async}" (click)="flip()">
+  <div class=" flip-card__inner">
+    <span class="flip-card__front"></span>
+    <span class="flip-card__back"></span>
+  </div>
+</div>
